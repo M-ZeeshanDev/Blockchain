@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Blockchain.Enums\Blockchain.Enums.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Blocks\Requests\" />
+    <None Remove="Blocks\Responses\" />
+    <None Remove="Constants\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Blockchains\Requests\" />
+    <Folder Include="Blockchains\Responses\" />
+    <Folder Include="Constants\" />
+  </ItemGroup>
+</Project>

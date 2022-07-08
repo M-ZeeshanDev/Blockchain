@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Blockchain.Persistence.Contracts\Blockchain.Persistence.Contracts.csproj" />
+    <ProjectReference Include="..\Blockchain.Services.Contracts\Blockchain.Services.Contracts.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Mappers\" />
+    <None Remove="Services\" />
+    <None Remove="Errors\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Mappers\" />
+    <Folder Include="Services\" />
+    <Folder Include="Errors\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Errors\ErrorMessages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ErrorMessages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Errors\ErrorMessages.Designer.cs">
+      <DependentUpon>ErrorMessages.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>
